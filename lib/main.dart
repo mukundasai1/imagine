@@ -55,7 +55,7 @@ void main() async {
           brightness: Brightness.dark,
         ),
       ),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
     ),
   );
 }

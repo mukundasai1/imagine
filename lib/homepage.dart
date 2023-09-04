@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:imagine/pages/chatwindow.dart';
 import 'package:imagine/pages/home.dart';
 import 'package:imagine/pages/new.dart';
+import 'package:imagine/pages/notificationpage.dart';
 import 'package:imagine/pages/profile.dart';
 import 'package:imagine/pages/reels.dart';
 import 'package:imagine/pages/search.dart';
@@ -20,6 +22,24 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void _notificationarea() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const NotificationPage(),
+      ),
+    );
+  }
+
+  void _chatWindow() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const ChatWindow(),
+      ),
+    );
+  }
+
   final List<Widget> _navbarChildren = const [
     Home(),
     Search(),
@@ -33,22 +53,28 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: const Row(
+        title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               "Imagine!",
             ),
             Row(
               children: [
-                Icon(
-                  Icons.favorite_border,
+                IconButton(
+                  icon: const Icon(
+                    Icons.favorite_border,
+                  ),
+                  onPressed: _notificationarea,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
-                Icon(
-                  Icons.chat_bubble_outline_rounded,
+                IconButton(
+                  icon: const Icon(
+                    Icons.chat_bubble_outline_rounded,
+                  ),
+                  onPressed: _chatWindow,
                 ),
               ],
             )
