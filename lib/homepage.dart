@@ -58,6 +58,9 @@ class _HomePageState extends State<HomePage> {
           children: [
             const Text(
               "Imagine!",
+              style: TextStyle(
+                fontFamily: "KaushanScript",
+              ),
             ),
             Row(
               children: [
