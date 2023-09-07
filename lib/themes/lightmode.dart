@@ -12,6 +12,11 @@ ThemeData lightTheme = ThemeData(
     secondary: Colors.black,
     brightness: Brightness.light,
   ),
+  textButtonTheme: const TextButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: MaterialStatePropertyAll(Colors.black),
+    ),
+  ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     enableFeedback: true,
     type: BottomNavigationBarType.fixed,

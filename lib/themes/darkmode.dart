@@ -6,6 +6,14 @@ ThemeData darkTheme = ThemeData(
     foregroundColor: Colors.white,
     elevation: 0,
   ),
+  textButtonTheme: const TextButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: MaterialStatePropertyAll(
+        Colors.white,
+      ),
+    ),
+  ),
+  
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     enableFeedback: true,
     type: BottomNavigationBarType.fixed,
